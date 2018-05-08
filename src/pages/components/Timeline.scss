@@ -1,0 +1,39 @@
+.timeline-block {
+    position: relative;
+}
+
+.timeline-content-container {
+    position: relative;
+}
+
+.content-label {
+    display: flex;
+}
+
+.label {
+    line-height: 34px;
+    width: 120px;
+}
+
+.timeline-icon-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px #333, inset 0 2px 0 rgba(#000, .08), 0 3px 0 4px rgba(#000, .05);
+}
+
+.timeline-icon {
+    display: block;
+    width: 24px;
+    height: 24px;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    margin-left: -12px;
+    margin-top: -12px;
+    border-radius: 50%;
+    background-color: #333;
+}
