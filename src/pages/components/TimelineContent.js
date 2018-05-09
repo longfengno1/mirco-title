@@ -11,10 +11,13 @@ export default class TimelineContent extends Component {
 
     render() {
         return (
-            <div className={Styles.timelineContentContainer}>
-                <h2>哈哈哈</h2>
-                <div className={Styles.contentLabel}></div>
-            </div>
+            <article className={Styles.timelineContentContainer}>
+                <h2>名称</h2>
+                <p className={Styles.contentLabel}><span>标签</span><span>标签</span><span>标签</span></p>
+                <p className={Styles.contentLabel}><span>标签</span></p>
+                <p className={Styles.contentLabel}><span>标签</span></p>
+                <p className={Styles.contentLabel}><span>标签</span></p>
+            </article>
         );
     }
 }

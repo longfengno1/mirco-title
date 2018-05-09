@@ -1,3 +1,19 @@
-.text {
-    color: red;
+.timeline-container {
+  position: relative;
+  padding: 2em 0;
+  margin: 0 auto;
+  margin-top: 3em;
+  margin-bottom: 3em;
+  width: 90%;
+  max-width: 1170px;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 20%;
+    margin-left: -2px;
+    width: 4px;
+    height: 100%;
+    background-color: #d7e4ed;
+  }
 }

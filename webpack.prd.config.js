@@ -68,7 +68,7 @@ module.exports = {
     resolve: {
         extensions: ['.json', '.js', '.jsx', '.css', 'scss']
     },
-    devtool: 'null',
+    devtool: 'none',
     devServer: {
         contentBase: "./public",
         historyApiFallback: true,
@@ -77,7 +77,20 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: __dirname + "/src/index.tmpl.html"
+            inject: true,
+            template: __dirname + "/src/index.tmpl.html",
+            minify: {
+                removeComments: true,
+                collapseWhitespace: true,
+                removeRedundantAttributes: true,
+                useShortDoctype: true,
+                removeEmptyAttributes: true,
+                removeStyleLinkTypeAttributes: true,
+                keepClosingSlash: true,
+                minifyJS: true,
+                minifyCSS: true,
+                minifyURLs: true
+            }
         }),
         new ExtractTextPlugin({
             filename: 'styles.css',
