@@ -7,6 +7,7 @@
 .timeline-time {
   display: inline-block;
   position: absolute;
+  line-height: 30px;
   top: 20px;
   width: calc(20% - 30px - 10px);
   text-align: right;
@@ -32,11 +33,12 @@
 
 .content-label {
   display: flex;
-  margin-top: 6px;
+  flex-wrap: wrap;
   span {
     width: 120px;
     background-color: #75ce66;
     text-align: center;
+    margin-top: 6px;
     padding: 5px 0;
     margin-right: 5px;
     border-radius: 5px;

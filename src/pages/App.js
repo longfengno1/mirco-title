@@ -3,7 +3,7 @@ import React, {
     Component
 } from 'react';
 import styles from './App.scss';
-import TimelineBlock from './components/TimelineBlock';
+import TimelineBlock from '../components/timeline/TimelineBlock';
 import PropTypes from 'prop-types';
 
 export default class App extends Component {
@@ -19,9 +19,12 @@ export default class App extends Component {
 
     render() {
         return (
-            <section className={styles.timelineContainer}>
-                {this.renderItems(this.records)}
-            </section>
+            <div>
+                <input type='date'/>
+                <section className={styles.timelineContainer}>
+                    {this.renderItems(this.records)}
+                </section>
+            </div>
         );
     }
 }

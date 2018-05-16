@@ -6,7 +6,8 @@
   "scripts": {
     "start": "webpack",
     "server": "webpack-dev-server --open",
-    "build": "NODE_ENV=production webpack --config ./webpack.prd.config.js --progress"
+    "build": "webpack --config ./webpack.prd.config.js --progress --mode production",
+    "clean": "rm -rf ./node_modules/ & rm package-lock.json"
   },
   "repository": {
     "type": "git",
@@ -20,7 +21,8 @@
   "homepage": "https://github.com/longfengno1/mirco-title#readme",
   "dependencies": {
     "react": "^16.3.2",
-    "react-dom": "^16.3.2"
+    "react-dom": "^16.3.2",
+    "redux": "^4.0.0"
   },
   "devDependencies": {
     "autoprefixer": "^8.4.1",

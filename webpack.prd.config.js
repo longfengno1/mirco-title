@@ -7,8 +7,31 @@ module.exports = {
     mode: 'production',
     entry: path.join(__dirname, 'src', 'index'),
     output: {
-        filename: 'bundle-[hash].js',
+        filename: '[name]-[hash].js',
+        chunkFilename: '[name]-[hash].js',
         path: path.resolve(__dirname, 'public')
+    },
+    optimization: {
+        splitChunks: {
+            chunks: 'initial',
+            cacheGroups: {
+                vendor: {
+                    test: /node_modules\//,
+                    name: 'vendor',
+                    priority: 10,
+                    enforce: true
+                },
+                commons: {
+                    test: /common\//,
+                    name: 'commons',
+                    priority: 10,
+                    enforce: true
+                }
+            }
+        },
+        runtimeChunk: {
+            name: 'mainfest'
+        }
     },
     module: {
         rules: [{
